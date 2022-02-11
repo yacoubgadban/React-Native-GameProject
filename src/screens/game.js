@@ -214,8 +214,10 @@ const GameScreen=(props)=>{
                      <Image style={styles.image} source={require('../../assets/images/logo.png')}/>   
                  </View>
          </View>  
-        
-            <View style={styles.loadingView}>   
+
+            <View style={styles.loadingView}>  
+            <Image style={styles.image} source={{uri:'https://media.giphy.com/media/jAYUbVXgESSti/giphy.gif'}}/>   
+
             </View>
             </View>
                  )
