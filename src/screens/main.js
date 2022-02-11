@@ -1,11 +1,14 @@
 import React from 'react';
-import {View , Text ,StyleSheet ,TouchableOpacity} from 'react-native'
+import {View , Text ,StyleSheet ,TouchableOpacity,Image} from 'react-native'
  {/*// main page //*/} 
 const MainScreen=(props)=>{
 
 
     return( 
         <View style={styles.container}>
+             <View >
+                     <Image style={styles.image} source={require('../../assets/images/splash_logo.png')}/> 
+                </View>
             <TouchableOpacity style={styles.btn} onPress={()=>{props.navigation.navigate('game')}}>
                 <Text style={styles.btntext}>Let's Play</Text>   
             </TouchableOpacity>    
@@ -24,8 +27,7 @@ const styles = StyleSheet.create({
     },
     image:{
         width: 220,
-        height:350,
-        
+        height:350,     
   },
   btn:{
       marginTop:20,
