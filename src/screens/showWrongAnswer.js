@@ -16,7 +16,7 @@ const WrongAnswersScreen=(props)=>{
             data={questions}
             keyExtractor={item=>item.question}
             renderItem={ ({item}) =>( 
-                        <View style={{margin:15}} key={item.question}>
+                        <View style={styles.header} key={item.question}>
                             <Text style={styles.questionText}>Question : {item.question} </Text> 
                             <Text style={styles.answerText}>Correct Answer : {item.answer} </Text>     
                         </View> 
@@ -44,7 +44,10 @@ const styles = StyleSheet.create({
         marginTop:30,
         alignItems: 'center',
   },
-  
+  header:{
+    margin:15,
+
+  },
   questionText:{
     fontSize:15,
 

@@ -102,9 +102,6 @@ const Game=(props)=>{
     }
   }
 
-
-   
-    
     // set default time
     const defaultTimer =()=>{
         //first 10 questions
