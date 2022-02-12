@@ -11,6 +11,7 @@ const WrongAnswersScreen=(props)=>{
                      <Image style={styles.image} source={require('../../assets/images/splash_logo.png')}/> 
                 </View>       
             <View > 
+              
             <FlatList
             data={questions}
             keyExtractor={item=>item.question}
