@@ -1,6 +1,7 @@
 import React from 'react';
 import {View , Text ,StyleSheet ,TouchableOpacity,Image} from 'react-native'
- {/*// main page //*/} 
+ 
+{/*// main page //*/} 
 const GameScreen=(props)=>{
     const i=props.i
     const score=props.score

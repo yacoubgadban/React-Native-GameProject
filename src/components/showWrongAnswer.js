@@ -2,6 +2,7 @@ import React from 'react';
 import {View , Text ,StyleSheet,FlatList ,Image} from 'react-native'
  
 
+//after finish the questions show the questions that player not answerd correct and show the correct answer to player 
 const WrongAnswersScreen=(props)=>{
     const questions=props.route.params.questions 
 

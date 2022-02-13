@@ -1,13 +1,14 @@
 import React from 'react';
 import {View , Text ,StyleSheet ,TouchableOpacity,Image} from 'react-native'
 
-
+//after answer to all questions
 const GameOverScreen=(props)=>{
 
     const i=props.i
     const score=props.score
     const questionsWrongAnswers=props.questionsWrongAnswers
     const prop =props.prop
+    //player win
     if(i>19 && score>=10){
     return( 
         <View >
@@ -27,6 +28,7 @@ const GameOverScreen=(props)=>{
                     </View>
             </View>   
     )
+    //player lost
     }else if(i>19 && score<10){
         return(
                
@@ -37,6 +39,7 @@ const GameOverScreen=(props)=>{
                 <View style={styles.endGame}>
                     <Text style={styles.failedText}>Failed</Text>  
                     <Text style={styles.endGameMessage}>You need to answer 10 correct answers</Text>
+                    <Text style={styles.endGameMessage}>You Answerd {score} correctly</Text>
                     <Image style={styles.endGameImage} source={require('../../assets/images/failed_character.png')}/>   
                 </View>
                 {/*button to show the questions answerd wron with correct answer*/}

@@ -1,8 +1,8 @@
 import React,{useState,useEffect} from 'react';
 import {View , Text ,StyleSheet ,TouchableOpacity,Image} from 'react-native'
-import GameScreen from '../screens/gameScreen'
-import GameOverScreen from '../screens/gameOverScreen'
-import LoadingScreen from '../screens/loadingScreen'
+import GameScreen from '../components/gameScreen'
+import GameOverScreen from '../components/gameOverScreen'
+import LoadingScreen from '../components/loadingScreen'
 
 const Game=(props)=>{
  
@@ -142,7 +142,7 @@ const Game=(props)=>{
       }
 
 
-      //reset timer
+      //reset timer when time 0
       const ifTimeOut=()=>{
         if(timer==0){
             setIsRunning(false);
@@ -163,13 +163,13 @@ const Game=(props)=>{
     const gameScreen=()=>{
             
         {/*/////////////////////////////   start game  //////////////////////////////*/}
-        if (questions[i] && i<20){    
+        if (questions[i] && i<questions.length){    
             return(           
             <GameScreen  questions={questions} i={i} timer={timer} score={score} changeColor={changeColor} 
                         answerClicked={answerClicked} timerColor={timerColor} />
              )
               {/*/////////////////////////////   loading  //////////////////////////////*/}
-             }else if(!questions[i] && i<20){
+             }else if(!questions[i] && i<questions.length){
                  return(
                    <LoadingScreen i={i}/>
                  )
@@ -180,10 +180,10 @@ const Game=(props)=>{
                      <GameOverScreen  prop={props}  questionsWrongAnswers={questionsWrongAnswers} score={score} i={i} />
                         )
                 }
-              
-
-
     }
+
+
+    //component return
     return( 
         <View > 
             <View >

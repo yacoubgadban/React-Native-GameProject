@@ -1,6 +1,8 @@
 import React from 'react';
 import {View , Text ,StyleSheet ,TouchableOpacity,Image} from 'react-native'
  
+
+// loading screen
 const LoadingScreen=(props)=>{
 
     const i = props.i

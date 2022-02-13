@@ -1,9 +1,7 @@
 import React from 'react';
 import {View , Text ,StyleSheet ,TouchableOpacity,Image} from 'react-native'
- {/*// main page //*/} 
-const MainScreen=(props)=>{
-
-
+ {/*// first page //*/} 
+const FirstPageScreen=(props)=>{
     return( 
         <View style={styles.container}>
              <View >
@@ -52,4 +50,4 @@ const styles = StyleSheet.create({
   }
   });
   
-export default MainScreen;
+export default FirstPageScreen;
