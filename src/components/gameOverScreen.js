@@ -19,13 +19,14 @@ const GameOverScreen=(props)=>{
                     <Text style={styles.successText}>GREAT JOB</Text>  
                     <Text style={styles.endGameMessage}>You answerd to {score} questions correctly </Text>
                     <Image style={styles.endGameImage} source={require('../../assets/images/success_character.png')}/>   
-                </View>
-                {/*button to show the questions answerd wron with correct answer*/}
-                <View style={{margin:40 ,alignItems: 'center'}}>
+                    <View>
                         <TouchableOpacity style={styles.btnAnswer} onPress={()=>{prop.navigation.navigate('wrongAnswers' ,{questions:questionsWrongAnswers})}}>
                                         <Text style={styles.btnTextAnswer}>Show wrong answerd</Text>
                         </TouchableOpacity>         
                     </View>
+                </View>
+                {/*button to show the questions answerd wron with correct answer*/}
+                
             </View>   
     )
     //player lost
@@ -41,13 +42,14 @@ const GameOverScreen=(props)=>{
                     <Text style={styles.endGameMessage}>You need to answer 10 correct answers</Text>
                     <Text style={styles.endGameMessage}>You Answerd {score} correctly</Text>
                     <Image style={styles.endGameImage} source={require('../../assets/images/failed_character.png')}/>   
-                </View>
-                {/*button to show the questions answerd wron with correct answer*/}
-                <View style={{margin:40 ,alignItems: 'center'}}>
+                    <View >
                     <TouchableOpacity style={styles.btnAnswer} onPress={()=>{prop.navigation.navigate('wrongAnswers' ,{questions:questionsWrongAnswers})}}>
                                     <Text style={styles.btnTextAnswer}>Show wrong answerd</Text>
                     </TouchableOpacity>                       
                 </View>
+                </View>
+                {/*button to show the questions answerd wron with correct answer*/}
+               
             </View>  
            
         
@@ -60,11 +62,10 @@ const GameOverScreen=(props)=>{
 //style
 const styles = StyleSheet.create({
     
-      
-     
           btnAnswer:{
             marginTop:20,
             borderRadius:12,
+            padding:10,
             backgroundColor:'#778899',
             shadowColor:'#000000',
             shadowOpacity:0.1,
@@ -74,13 +75,13 @@ const styles = StyleSheet.create({
          
           failHeader:{
               backgroundColor:'#B22222',
-              paddingTop:50,
+              paddingTop:20,
               
           },
      
-          btnTextAnswer:{fontSize:18,
-              padding:15,
-              borderRadius:15,
+          btnTextAnswer:{
+              fontSize:20,
+              padding:10,
               color:'#fff'},
   
           successHeader:{
@@ -111,11 +112,11 @@ const styles = StyleSheet.create({
               marginLeft:'75%'
           },
           endGameImage:{
-              width: 265,
-              height:320,
+              width: 220,
+              height:300,
               },
               endGameMessage:{
-                  fontSize:25,
+                  fontSize:18,
                   color:'#000',
                   margin:20,
                   marginRight:70,

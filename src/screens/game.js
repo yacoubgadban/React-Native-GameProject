@@ -163,13 +163,13 @@ const Game=(props)=>{
     const gameScreen=()=>{
             
         {/*/////////////////////////////   start game  //////////////////////////////*/}
-        if (questions[i] && i<questions.length){    
+        if (questions[i] && i<20){    
             return(           
             <GameScreen  questions={questions} i={i} timer={timer} score={score} changeColor={changeColor} 
                         answerClicked={answerClicked} timerColor={timerColor} />
              )
               {/*/////////////////////////////   loading  //////////////////////////////*/}
-             }else if(!questions[i] && i<questions.length){
+             }else if(!questions[i] && i<20){
                  return(
                    <LoadingScreen i={i}/>
                  )
